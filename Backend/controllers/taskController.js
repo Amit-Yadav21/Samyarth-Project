@@ -53,19 +53,32 @@ const getAllTasks = async (req, res, next) => {
 const updateTask = async (req, res, next) => {
     try {
         const { id } = req.params;
-        const { description, dueDate } = req.body;
-        const priority = suggestPriority(description, dueDate);
+        const { description } = req.body;
+
+        // Use the Gemini AI to generate priority based on description
+        const priority = await generate(description);
+
+        // Update the task in the database
         const task = await Task.findByIdAndUpdate(
             id,
-            { description, dueDate, priority },
+            { description, priority },
             { new: true }
         );
-        res.status(200).json(task);
+
+        // Check if the task exists
+        if (!task) {
+            const err = new Error("Task not found");
+            err.status = 404;
+            return next(err);
+        }
+
+        // Return the updated task
+        res.status(200).json({ message: 'Task updated successfully', task });
     } catch (error) {
-        const err = new Error("Error updating task")
+        console.error("Error updating task:", error.message);
+        const err = new Error("Error updating task");
         err.status = 500;
-        return next(err)
-        // res.status(500).json({ message: 'Error updating task', error });
+        return next(err);
     }
 };
 
@@ -73,13 +86,21 @@ const updateTask = async (req, res, next) => {
 const deleteTask = async (req, res, next) => {
     try {
         const { id } = req.params;
-        await Task.findByIdAndDelete(id);
-        res.status(200).json({ message: 'Task deleted successfully' });
+        const deletedTask = await Task.findByIdAndDelete(id);
+
+        if (!deletedTask) {
+            const err = new Error("Task not found")
+            err.status = 404;
+            return next(err)
+            // return res.status(404).json({ message: 'Task not found' });
+        }
+
+        res.status(200).json({ message: 'Task deleted successfully', task: deletedTask });
     } catch (error) {
         const err = new Error("Error deleting task")
         err.status = 500;
         return next(err)
-        // res.status(500).json({ message: 'Error deleting task', error });
+        // res.status(500).json({ message: 'Error deleting task', error });
     }
 };
 
