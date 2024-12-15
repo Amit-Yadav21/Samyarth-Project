@@ -10,7 +10,7 @@ router.post('/create/task', createTask);
 router.get('/find/all/task', getAllTasks);
 
 // Route for updating a task
-router.put('/:id', updateTask);
+router.put('/update/task/:id', updateTask);
 
 // Route for deleting a task
 router.delete('/delete/task/:id', deleteTask);
