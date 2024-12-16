@@ -245,6 +245,8 @@ Here’s the corrected version of your `GET` API endpoint description:
 ## Samyarth Project Postman Documentation Link
 https://documenter.getpostman.com/view/22765203/2sAYHzFhxV
 
+![Image 1](./README-File-Image/postmanDoc-1.png) ![Image 2](./README-File-Image/postmanDoc-2.png) ![Image 3](./README-File-Image/postmanDoc-3.png) ![Image 4](./README-File-Image//postmanDoc-4.png) ![Image 5](./README-File-Image//postmanDoc-5.png)
+
 ---
 ## API Testing
 To test your API endpoints, you can use tools like [Postman](https://www.postman.com/).
