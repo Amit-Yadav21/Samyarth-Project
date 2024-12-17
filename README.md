@@ -24,7 +24,9 @@
     - [`GET /api/find/all/task`](#get-apifindalltask)
   - [When there is an error in the routes ⚠️❌](#when-there-is-an-error-in-the-routes-️)
   - [🔗 Samyarth Project Postman Documentation Link](#-samyarth-project-postman-documentation-link)
-  - [Backend Project Deployment Information](#backend-project-deployment-information)
+  - [📜 Backend Project Deployment Information](#-backend-project-deployment-information)
+  - [🔗 How to connect the backend with the frontend](#-how-to-connect-the-backend-with-the-frontend)
+    - [**Set Up CORS (Cross-Origin Resource Sharing)** in Backend](#set-up-cors-cross-origin-resource-sharing-in-backend)
 
 ---
 
@@ -359,4 +361,66 @@ https://documenter.getpostman.com/view/22765203/2sAYHzFhxV
 
 ---
 
-## Backend Project Deployment Information
+## 📜 Backend Project Deployment Information
+- **Backend deployment process on Vercel setup**
+  - First, create a `vercel.json` file inside the backend folder, and then use this code:
+  ```json
+  {
+      "version": 2,
+      "builds": [
+          {
+              "src": "server.js",
+              "use": "@vercel/node"
+          }
+      ],
+      "routes": [
+          {
+              "src": "/(.*)",
+              "dest": "/server.js"
+          }
+      ] 
+  }
+  ```
+
+  - Afterward, add the following script inside the `package.json` file:
+  ```json
+  "scripts": {
+      "dev": "node --watch server.js",
+      "build": "node server.js",
+      "vercel-build": "echo hello"
+  }
+  ```
+  This sets up the necessary configuration for deploying the backend on Vercel.
+
+- **Backend Deployment Live Link for "Find All Task" API**
+  ```
+  https://samyarth-project.vercel.app/api/find/all/task
+  ```
+
+## 🔗 How to connect the backend with the frontend
+To connect the backend to the frontend, follow these steps:
+
+### **Set Up CORS (Cross-Origin Resource Sharing)** in Backend
+
+Install the `cors` middleware and configure it to allow requests from the frontend domain.
+CORS allows your frontend (which runs on a different port or domain) to interact with your backend API. Here's how to enable it:
+
+- Install `cors` middleware in your backend:
+
+  ```bash
+  npm install cors
+  ```
+
+- In our `server.js` (or main backend file), enable CORS:
+
+  ```javascript
+  import cors from 'cors';
+
+  // Enable CORS for frontend URL
+  const corsOptions = {
+      origin: "http://localhost:5173", // Wrap the URL in quotes
+      optionsSuccessStatus: 200,       // For legacy browser support
+      credentials: true,               // Allow credentials like cookies
+      methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
+  };
+  app.use(cors(corsOptions));
