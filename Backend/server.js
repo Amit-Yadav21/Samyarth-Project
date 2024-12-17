@@ -5,6 +5,7 @@ import databaseConection from './databaseConection/db.js'
 import logging from './middleware/logger.js'
 import errorHandler from './middleware/errorHandler.js'
 import notFoundHandler from './middleware/notFoundHandler.js'
+import cors from 'cors';
 
 dotenv.config();
 
@@ -16,6 +17,13 @@ app.use(express.json());
 
 // Logger Meddleware, Application-level middleware - Logging (whole application)
 app.use(logging)
+
+const corsOptions = {
+    origin: "http://localhost:5173",
+    optionsSuccessStatus: 200,
+    credentials:true
+}
+app.use(cors(corsOptions))
 
 // Routes
 app.use('/api', taskRoutes)
