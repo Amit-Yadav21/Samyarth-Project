@@ -20,21 +20,21 @@ app.use(logging)
 
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production'
-    ? process.env.PRODUCTION_URL // Production URL from .env
-    : process.env.DEVELOPMENT_URL, // Development URL from .env
+    ? 'https://samyarth-project-vt6c.vercel.app' // Production URL
+    : 'http://localhost:5173', // Development URL
   optionsSuccessStatus: 200,
   credentials: true, // Allow credentials
 };
-app.use(cors(corsOptions))
+app.use(cors())
 
 // Routes
 app.use('/api', taskRoutes)
 
 // notFound Handling Middleware
-app.use(notFoundHandler)
+app.use(notFoundHandler) 
 
 // Error Handling Middleware
-app.use(errorHandler);
+app.use(errorHandler); 
 
 // Connect to the database
 databaseConection();
