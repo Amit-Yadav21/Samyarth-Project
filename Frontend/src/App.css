@@ -1,0 +1,10 @@
+body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+@media (max-width: 425px) {
+    .moargin-top-mobile-size{
+        margin-top: 150px;
+    }
+}

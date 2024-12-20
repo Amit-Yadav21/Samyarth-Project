@@ -1,0 +1,25 @@
+.footer-bg-color{
+    background: linear-gradient(180deg, rgb(195, 247, 235) 0%, rgba(255, 255, 255, 1) 100%, rgba(37, 37, 37, 1) 100%);
+}
+.whats-app-icon{
+    border: 2px solid green;
+}
+.under-line-footer-text{
+    text-decoration: underline;
+    font-family:cursive;
+}
+.list-unstyled p,
+.list-unstyled li{
+    font-family:cursive;
+}
+.Useful-Links li:hover{
+    width: 70%;
+    border: 1px solid;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .list-unstyled p,
+    .list-unstyled li{
+        text-align: left;
+    }
+}

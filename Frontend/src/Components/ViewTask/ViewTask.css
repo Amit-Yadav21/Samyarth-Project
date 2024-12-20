@@ -1,0 +1,31 @@
+.container-color {
+    background: linear-gradient(180deg, rgb(195, 247, 235) 0%, rgba(255, 255, 255, 1) 100%, rgba(37, 37, 37, 1) 100%);
+}
+
+.edit-delete-btn button {
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.card-body {
+    background: linear-gradient(180deg, rgba(171, 247, 229, 1) 0%, rgba(248, 254, 253, 1) 70%, rgba(255, 255, 255, 1) 83%);
+}
+
+.card-body:hover {
+    background: white;
+}
+
+.edit-btn:hover {
+    background-color: darkkhaki;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}
+
+.view-title-bg-color {
+    background-color: #f7b103;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: cursive;
+}

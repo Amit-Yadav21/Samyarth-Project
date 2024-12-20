@@ -1,0 +1,14 @@
+.bg-color-home-2nd-page {
+    background: linear-gradient(180deg, rgb(195, 247, 235) 0%, rgba(255, 255, 255, 1) 100%, rgba(37, 37, 37, 1) 100%);
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge {
+    position: absolute;
+    font-size: 0.8rem;
+}

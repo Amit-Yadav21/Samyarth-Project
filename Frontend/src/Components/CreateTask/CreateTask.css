@@ -1,0 +1,41 @@
+.create-task-bg-color {
+    background: linear-gradient(180deg, rgba(248,254,253,1) 18%, rgba(171,247,229,0.989233193277311) 45%, rgba(255,255,255,1) 100%);
+}
+.title-color{
+    color: white;
+    background-color: rgb(84, 84, 250);
+}
+.title-bg-color {
+    background-color: #f7b103;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.create-btn-color {
+    background-color: #ffc107;
+    border: none;
+}
+
+.container-bg-color {
+    background: linear-gradient(180deg, rgba(171, 247, 229, 1) 43%, rgba(248, 254, 253, 1) 81%, rgba(255, 255, 255, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-bg-color h1{
+    font-family:fantasy;
+}
+
+.custom-img {
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+.form-border-design{
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.text-font-size{
+    font-size:larger;
+}
