@@ -19,13 +19,11 @@ app.use(express.json());
 app.use(logging)
 
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production'
-    ? 'https://samyarth-project-vt6c.vercel.app' // Production URL
-    : 'http://localhost:5173', // Development URL
-  optionsSuccessStatus: 200,
-  credentials: true, // Allow credentials
-};
-app.use(cors())
+    origin:true,
+    optionsSuccessStatus: 200,
+    credentials:true
+}
+app.use(cors(corsOptions))
 
 // Routes
 app.use('/api', taskRoutes)
