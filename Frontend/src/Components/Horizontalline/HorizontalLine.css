@@ -1,0 +1,26 @@
+.horizontal-line {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    max-width: 800px;
+}
+
+.horizontal-line::before,
+.horizontal-line::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: orange;
+}
+
+.center-block {
+    width: 50px;
+    height: 10px;
+    background-color: orange;
+}
+
+@media (max-width: 768px) {
+    .horizontal-line{
+        width: 50%;
+    }
+}

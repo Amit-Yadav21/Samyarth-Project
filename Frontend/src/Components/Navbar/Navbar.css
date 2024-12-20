@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  font-weight: 700;  
+  color: #333;
+}
+
+.nav-item:hover{
+  background: linear-gradient(180deg, rgba(248,254,253,1) 0%, rgba(171,247,229,0.989233193277311) 0%, rgba(255,255,255,1) 70%);
+  /* background-color:rgb(240, 246, 252); */
+}
+
+.menu-item {
+  position: relative;
+  padding-right: 1rem; /* Space before the line */
+  margin-right: 1rem;  /* Space after the line */
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #6d6b6b; 
+}
+
+.menu-item:last-child::after {
+  display: none; /* Remove the line after the last item */
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+      padding-right: 0;
+      margin-right: 0;
+      padding-bottom: 0.5rem; 
+      margin-bottom: 0.5rem;  
+      border-bottom: 1px solid #ccc; 
+  }
+  .menu-item::after {
+      display: none; 
+  }
+}
