@@ -1,6 +1,3 @@
-# Table of Contents
-
-- [Table of Contents](#table-of-contents)
 - [**🏷️ Project Name: Task Management App**](#️-project-name-task-management-app)
   - [📖 Project Overview](#-project-overview)
     - [AI Task Manager with Smart Suggestions](#ai-task-manager-with-smart-suggestions)
@@ -24,9 +21,17 @@
     - [`GET /api/find/all/task`](#get-apifindalltask)
   - [When there is an error in the routes ⚠️❌](#when-there-is-an-error-in-the-routes-️)
   - [🔗 Samyarth Project Postman Documentation Link](#-samyarth-project-postman-documentation-link)
+  - [Postman Documentation](#postman-documentation)
   - [📜 Backend Project Deployment Information](#-backend-project-deployment-information)
   - [🔗 How to connect the backend with the frontend](#-how-to-connect-the-backend-with-the-frontend)
     - [**Set Up CORS (Cross-Origin Resource Sharing)** in Backend](#set-up-cors-cross-origin-resource-sharing-in-backend)
+- [***👉 Frontend Project Information***](#-frontend-project-information)
+  - [Install Dependencies](#install-dependencies-1)
+  - [How many Dependencies use in frontend](#how-many-dependencies-use-in-frontend)
+  - [How to start frontend server](#how-to-start-frontend-server)
+  - [Frontend Deployed Link](#frontend-deployed-link)
+    - [**The frontend is live and accessible at the following link 👉🏿**](#the-frontend-is-live-and-accessible-at-the-following-link-)
+  - [Home Page, Create New Task Page, View Task Page, Footer Page](#home-page-create-new-task-page-view-task-page-footer-page)
 
 ---
 
@@ -355,9 +360,23 @@ Here are the main API endpoints for task management:
 ## 🔗 Samyarth Project Postman Documentation Link
 ```
 https://documenter.getpostman.com/view/22765203/2sAYHzFhxV
+
 ```
 
-![Image 1](./README-File-Image/postmanDoc-1.png) ![Image 2](./README-File-Image/postmanDoc-2.png) ![Image 3](./README-File-Image/postmanDoc-3.png) ![Image 4](./README-File-Image//postmanDoc-4.png) ![Image 5](./README-File-Image//postmanDoc-5.png)
+## Postman Documentation
+
+<p align="center" style="display: flex; justify-content: space-between;">
+  <img src="./README-File-Image/postmanDoc-1.png" alt="Postman Doc 1" style="width: 50%; margin: 0 5px;">
+  <img src="./README-File-Image/postmanDoc-2.png" alt="Postman Doc 2" style="width: 50%; margin: 0 5px;">
+</p>
+<p align="center" style="display: flex; justify-content: space-between;">
+  <img src="./README-File-Image/postmanDoc-3.png" alt="Postman Doc 3" style="width: 50%; margin: 0 5px;">
+  <img src="./README-File-Image/postmanDoc-4.png" alt="Postman Doc 4" style="width: 50%; margin: 0 5px;">
+</p>
+<p align="center" style="display: flex; justify-content: space-between;">
+  <img src="./README-File-Image/postmanDoc-5.png" alt="Postman Doc 5" style="width: auto; margin: 0 5px;">
+</p>
+
 
 ---
 
@@ -393,8 +412,10 @@ https://documenter.getpostman.com/view/22765203/2sAYHzFhxV
   This sets up the necessary configuration for deploying the backend on Vercel.
 
 - **Backend Deployment Live Link for "Find All Task" API**
-  ```
+- 
+  ```markdown
   https://samyarth-project.vercel.app/api/find/all/task
+
   ```
 
 ## 🔗 How to connect the backend with the frontend
@@ -418,9 +439,38 @@ CORS allows your frontend (which runs on a different port or domain) to interact
 
   // Enable CORS for frontend URL
   const corsOptions = {
-      origin: "http://localhost:5173", // Wrap the URL in quotes
+      origin: true, // Wrap the URL in quotes
       optionsSuccessStatus: 200,       // For legacy browser support
       credentials: true,               // Allow credentials like cookies
       methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
   };
   app.use(cors(corsOptions));
+
+# ***👉 Frontend Project Information***
+## Install Dependencies
+How to Install project dependencies in Frontend
+
+- `npm install dependencies_name`
+
+## How many Dependencies use in frontend
+`bootstrap`, `axios`, `react-bootstrap`, `react-icons`, `react-toastify`, `react-router-dom`
+
+## How to start frontend server
+- **start server :** npm run dev
+
+## Frontend Deployed Link
+### **The frontend is live and accessible at the following link 👉🏿**
+[Frontend live link](https://samyarth-project-7q7s.vercel.app/)
+
+## Home Page, Create New Task Page, View Task Page, Footer Page
+
+<p align="center" style="display: flex; justify-content: space-between;">
+  <img src="./README-File-Image/frontend-home.png" alt="Home Page" style="width: 50%; margin: 0 5px;">
+  <img src="./README-File-Image/frontend-create.png" alt="Create New Task Page" style="width: 50%; margin: 0 5px;">
+</p>
+<p align="center" style="display: flex; justify-content: space-between;">
+  <img src="./README-File-Image/frontend-view-task.png" alt="View Task Page" style="width: auto; margin: 0 5px;">
+</p>
+<p align="center" style="display: flex; justify-content: space-between;">
+  <img src="./README-File-Image/frontend-footer.png" alt="Footer Page" style="width: auto; margin: 0 5px;">
+</p>
