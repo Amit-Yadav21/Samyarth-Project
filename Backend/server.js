@@ -19,20 +19,22 @@ app.use(express.json());
 app.use(logging)
 
 const corsOptions = {
-    origin: "http://localhost:5173",
-    optionsSuccessStatus: 200,
-    credentials:true
-}
+  origin: process.env.NODE_ENV === 'production'
+    ? process.env.PRODUCTION_URL // Production URL from .env
+    : process.env.DEVELOPMENT_URL, // Development URL from .env
+  optionsSuccessStatus: 200,
+  credentials: true, // Allow credentials
+};
 app.use(cors(corsOptions))
 
 // Routes
 app.use('/api', taskRoutes)
 
 // notFound Handling Middleware
-app.use(notFoundHandler) 
+app.use(notFoundHandler)
 
 // Error Handling Middleware
-app.use(errorHandler); 
+app.use(errorHandler);
 
 // Connect to the database
 databaseConection();
