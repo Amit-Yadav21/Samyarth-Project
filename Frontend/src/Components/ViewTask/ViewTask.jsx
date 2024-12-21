@@ -32,7 +32,7 @@ const ViewTask = () => {
 
       const fetchTasks = async () => {
         try {
-          const response = await axios.get('https://samyarth-project.vercel.app/api/find/all/task');
+          const response = await axios.get('https://samyarth-project-4nb7.vercel.app/api/find/all/task');
           setTasks(response.data);
           toast.success('Tasks loaded successfully!');
         } catch (error) {
