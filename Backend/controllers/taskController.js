@@ -37,15 +37,26 @@ const createTask = async (req, res, next) => {
 // Get all tasks
 const getAllTasks = async (req, res, next) => {
     try {
-        // priority: -1(Sorts tasks by priority in Ascending order (highest priority first))
-        // createdAt: 1(If two tasks have the same priority, they are sorted by their createdAt timestamp in ascending order (earliest first))
-        const tasks = await Task.find().sort({ priority: 1, createdAt: 1 });
+        // Define priority order
+        const priorityOrder = {
+            "Low": 1,
+            "Medium": 2,
+            "High": 3
+        };
+
+        // Fetch tasks and sort by priority using the priority order
+        const tasks = await Task.find().sort({
+            priority: 1  // First sort by priority (Low < Medium < High)
+        });
+
+        // Sort the tasks based on the priority order
+        tasks.sort((a, b) => priorityOrder[b.priority] - priorityOrder[a.priority]);
+
         res.status(200).json(tasks);
     } catch (error) {
-        const err = new Error("Server error while fetching task")
+        const err = new Error("Server error while fetching tasks");
         err.status = 500;
-        return next(err)
-        // res.status(500).json({ message: 'Error fetching tasks', error });
+        return next(err);
     }
 };
 
