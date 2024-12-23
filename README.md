@@ -22,6 +22,11 @@
   - [When there is an error in the routes ⚠️❌](#when-there-is-an-error-in-the-routes-️)
   - [🔗 Samyarth Project Postman Documentation Link](#-samyarth-project-postman-documentation-link)
   - [Postman Documentation](#postman-documentation)
+      - [Postman Collection](#postman-collection)
+      - [Postman Collection(Create API)](#postman-collectioncreate-api)
+      - [Postman Collection(Find All API)](#postman-collectionfind-all-api)
+      - [Postman Collection(Delete API)](#postman-collectiondelete-api)
+      - [Postman Collection(Update API)](#postman-collectionupdate-api)
   - [📜 Backend Project Deployment Information](#-backend-project-deployment-information)
   - [🔗 How to connect the backend with the frontend](#-how-to-connect-the-backend-with-the-frontend)
     - [**Set Up CORS (Cross-Origin Resource Sharing)** in Backend](#set-up-cors-cross-origin-resource-sharing-in-backend)
@@ -31,7 +36,14 @@
   - [How to start frontend server](#how-to-start-frontend-server)
   - [Frontend Deployed Link](#frontend-deployed-link)
     - [**The frontend is live and accessible at the following link 👉🏿**](#the-frontend-is-live-and-accessible-at-the-following-link-)
-  - [Home Page, Create New Task Page, View Task Page, Footer Page](#home-page-create-new-task-page-view-task-page-footer-page)
+  - [Visual Overview of the Application](#visual-overview-of-the-application)
+    - [Home Page](#home-page)
+    - [Create New Task Page](#create-new-task-page)
+    - [View Task Page](#view-task-page)
+    - [Footer Page](#footer-page)
+  - [Fixing React Routing Issues on Page Refresh After Deploying to Vercel](#fixing-react-routing-issues-on-page-refresh-after-deploying-to-vercel)
+    - [Getting page refresh error](#getting-page-refresh-error)
+    - [Solution](#solution)
 
 ---
 
@@ -358,25 +370,27 @@ Here are the main API endpoints for task management:
 ---
 
 ## 🔗 Samyarth Project Postman Documentation Link
-```
-https://documenter.getpostman.com/view/22765203/2sAYHzFhxV
-
-```
+<p align="center">
+  <a href="https://documenter.getpostman.com/view/22765203/2sAYHzFhxV" target="_blank" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/Postman%20Documentation-🔗%20Here-blue?style=for-the-badge" alt="Postman Documentation Link">
+  </a>
+</p>
 
 ## Postman Documentation
+#### Postman Collection
+![Postman Collection](./README-File-Image/postmanDoc-1.png) 
 
-<p align="center" style="display: flex; justify-content: space-between;">
-  <img src="./README-File-Image/postmanDoc-1.png" alt="Postman Doc 1" style="width: 50%; margin: 0 5px;">
-  <img src="./README-File-Image/postmanDoc-2.png" alt="Postman Doc 2" style="width: 50%; margin: 0 5px;">
-</p>
-<p align="center" style="display: flex; justify-content: space-between;">
-  <img src="./README-File-Image/postmanDoc-3.png" alt="Postman Doc 3" style="width: 50%; margin: 0 5px;">
-  <img src="./README-File-Image/postmanDoc-4.png" alt="Postman Doc 4" style="width: 50%; margin: 0 5px;">
-</p>
-<p align="center" style="display: flex; justify-content: space-between;">
-  <img src="./README-File-Image/postmanDoc-5.png" alt="Postman Doc 5" style="width: auto; margin: 0 5px;">
-</p>
+#### Postman Collection(Create API)
+![Create API](./README-File-Image/postmanDoc-2.png)
 
+#### Postman Collection(Find All API)
+![Find All API](./README-File-Image/postmanDoc-3.png) 
+
+#### Postman Collection(Delete API)
+![Deleted API](./README-File-Image/postmanDoc-4.png)
+
+#### Postman Collection(Update API)
+![Update API](./README-File-Image/postmanDoc-5.png)
 
 ---
 
@@ -460,17 +474,45 @@ How to Install project dependencies in Frontend
 
 ## Frontend Deployed Link
 ### **The frontend is live and accessible at the following link 👉🏿**
-[Frontend live link](https://samyarth-project-7q7s.vercel.app/)
+<p align="center">
+  <a href="https://samyarth-project-7q7s.vercel.app/" target="_blank" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge" alt="Frontend Live Link">
+  </a>
+</p>
 
-## Home Page, Create New Task Page, View Task Page, Footer Page
 
-<p align="center" style="display: flex; justify-content: space-between;">
-  <img src="./README-File-Image/frontend-home.png" alt="Home Page" style="width: 50%; margin: 0 5px;">
-  <img src="./README-File-Image/frontend-create.png" alt="Create New Task Page" style="width: 50%; margin: 0 5px;">
-</p>
-<p align="center" style="display: flex; justify-content: space-between;">
-  <img src="./README-File-Image/frontend-view-task.png" alt="View Task Page" style="width: auto; margin: 0 5px;">
-</p>
-<p align="center" style="display: flex; justify-content: space-between;">
-  <img src="./README-File-Image/frontend-footer.png" alt="Footer Page" style="width: auto; margin: 0 5px;">
-</p>
+## Visual Overview of the Application
+### Home Page
+![Home Page](./README-File-Image/frontend-home.png)
+
+### Create New Task Page
+![Create New Task Page](./README-File-Image/frontend-create.png)
+
+### View Task Page
+![View Task Page](./README-File-Image/frontend-view-task.png)
+
+### Footer Page
+![Footer Page](./README-File-Image/frontend-footer.png)
+
+## Fixing React Routing Issues on Page Refresh After Deploying to Vercel
+### Getting page refresh error
+![Error](./README-File-Image/page-refresh-error.jpg)
+
+This error happens in React apps (Single Page Applications) when you refresh the page. It occurs because Vercel's server doesn't recognize the specific route, as React manages the routes in the browser.
+
+### Solution
+To fix this, you need to configure a custom `vercel.json` file to ensure that all routes are redirected to your `index.html` file, allowing React to handle routing.
+
+1. **Go to the root directory** of your **frontend project** (where your `package.json` is located).
+
+2. **Create or Update `vercel.json`:** Add a `vercel.json` file in the root directory of your project with the following content:
+3. **Add the following content** to the `vercel.json` file:
+4. **Re-deploy Your App:** After adding the `vercel.json` file, re-deploy your app to Vercel.
+5. **Save** the file and redeploy your frontend to Vercel.
+
+  ```json
+   {
+     "rewrites": [
+       { "source": "/(.*)", "destination": "/" }
+     ]
+   }
