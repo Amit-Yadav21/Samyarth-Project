@@ -16,7 +16,7 @@ const Footer = () => {
                 {/* Left Section */}
                 <Col xs={12} md={4} className="mb-4 mb-md-0">
                     <img src={aiImage} alt="Task AI" style={{ width: "200px", marginRight: "10px" }} />
-                    <h3 className="fw-bold">AI Task Manager with Smart Suggestions</h3>
+                    <h4>AI Task Manager with Smart Suggestions</h4>
                 </Col>
 
                 {/* Airports */}
@@ -68,7 +68,7 @@ const Footer = () => {
             <Row>
                 <Col className="text-center">
                     <p className="mb-0">
-                        &copy; {new Date().getFullYear()} All Rights Reserved
+                        &copy; {new Date().getFullYear()} All Rights Reserved. Designed and Developed by Amit Yadav.
                     </p>
                 </Col>
             </Row>

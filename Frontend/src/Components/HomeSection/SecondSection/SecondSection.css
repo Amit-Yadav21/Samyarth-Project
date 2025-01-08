@@ -1,9 +1,5 @@
-/* .bg-color-home-banner{
-    background: linear-gradient(180deg, rgb(195, 247, 235) 0%, rgba(255, 255, 255, 1) 100%, rgba(37, 37, 37, 1) 100%);
-} */
-.bg-color-home-banner h1{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:3rem;
+.bg-color-home-banner h2{
+    font-weight: bolder;
 }
 .bg-color-home-banner li{
     text-align: left;

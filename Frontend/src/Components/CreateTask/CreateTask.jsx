@@ -18,7 +18,7 @@ const CreateTask = () => {
     try {
       const response = await axios.post('https://samyarth-project.vercel.app/api/create/task', { description });
       toast.success('Task created successfully!');
-      setTimeout(() => navigate('/viewtask'), 2000); // Navigate after showing success message
+      setTimeout(() => navigate('/viewtask'), 1000); // Navigate after showing success message
     } catch (error) {
       setError(error.response ? error.response.data.message : 'Error creating task');
       toast.error('Failed to create task!');
@@ -28,10 +28,10 @@ const CreateTask = () => {
   return (
     <div className="container-fluid container-bg-color full-screen-height p-5" style={{ marginTop: '100px' }}>
       <ToastContainer />
-      <h1>"Task Creation in the AI Task Manager with Smart Suggestions"</h1>
+      <h2>"Task Creation in the AI Task Manager with Smart Suggestions"</h2>
       <div className="container d-flex flex-column flex-md-row">
         <div className="mb-4 text-font-size">
-          <h3 className='fw-bold'>👉🏻AI-Based Task Prioritization</h3>
+          <h4 className='fw-bold'>👉🏻AI-Based Task Prioritization</h4>
           <p>The AI analyzes the task description and assigns a priority label</p>
           <ul className="list-unstyled">
             <li>
@@ -51,7 +51,7 @@ const CreateTask = () => {
 
         {/* Priority Section */}
         <div className='text-font-size'>
-          <h3 className='fw-bold'>👉🏼Priority Indication</h3>
+          <h4 className='fw-bold'>👉🏼Priority Indication</h4>
           <ul className="list-unstyled">
             <li>
               <strong>Clear Priority Indication:</strong> Tasks are marked with colored labels:

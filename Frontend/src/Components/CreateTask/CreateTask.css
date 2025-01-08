@@ -21,8 +21,9 @@
     align-items: center;
 }
 
-.container-bg-color h1{
-    font-family:fantasy;
+.container-bg-color h2{
+    font-weight: bolder;
+    text-decoration: underline;
 }
 
 .custom-img {
