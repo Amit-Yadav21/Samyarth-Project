@@ -113,7 +113,7 @@ const ViewTask = () => {
                     <Card.Text>
                       <strong>Priority:</strong>
                       <span
-                        className={`badge ${getPriorityClass(task.priority)} ms-2`}>
+                        className={`badge ${getPriorityClass(task.priority)} ms-2 mx-3 text-wrap text-start`}>
                         {task.priority}
                       </span>
                     </Card.Text>

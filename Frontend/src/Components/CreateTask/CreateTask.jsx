@@ -28,7 +28,7 @@ const CreateTask = () => {
   return (
     <div className="container-fluid container-bg-color full-screen-height p-5" style={{ marginTop: '100px' }}>
       <ToastContainer />
-      <h1 className='title-color'>"Task Creation in the AI Task Manager with Smart Suggestions"</h1>
+      <h1>"Task Creation in the AI Task Manager with Smart Suggestions"</h1>
       <div className="container d-flex flex-column flex-md-row">
         <div className="mb-4 text-font-size">
           <h3 className='fw-bold'>👉🏻AI-Based Task Prioritization</h3>

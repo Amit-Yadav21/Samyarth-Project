@@ -16,7 +16,7 @@ const Footer = () => {
                 {/* Left Section */}
                 <Col xs={12} md={4} className="mb-4 mb-md-0">
                     <img src={aiImage} alt="Task AI" style={{ width: "200px", marginRight: "10px" }} />
-                    <h3>AI Task Manager with Smart Suggestions</h3>
+                    <h3 className="fw-bold">AI Task Manager with Smart Suggestions</h3>
                 </Col>
 
                 {/* Airports */}
@@ -48,7 +48,7 @@ const Footer = () => {
 
                 {/* Connect Us */}
                 <Col xs={12} md={4} className="list-unstyled">
-                    <h5 className="fw-bold under-line-footer-text">Connect Us</h5>
+                    <h5 className="fw-bold under-line-footer-text">Contact Us</h5>
                     <p className="mb-1 fw-bold">NavGurukul Campus, Ward Number 202, Uperla Sukar, Dharamshala, Himachal Pradesh 176057</p>
                     <p><FaEnvelope className="me-2 fw-bold" />amit21@navgurukul.org, yadavamit222137@gmail.com</p>
                     <p><FaPhone className="me-1 fw-bold" />+91 9651025253</p>

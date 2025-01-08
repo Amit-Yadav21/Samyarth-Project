@@ -6,16 +6,16 @@
 }
 .under-line-footer-text{
     text-decoration: underline;
-    font-family:cursive;
+    /* font-family:Arial, Helvetica, sans-serif; */
 }
-.list-unstyled p,
+/* .list-unstyled p,
 .list-unstyled li{
-    font-family:cursive;
-}
+    font-family:Arial, Helvetica, sans-serif;
+} */
 .Useful-Links li:hover{
-    width: 70%;
-    border: 1px solid;
-    text-align: center;
+    /* width: 70%; */
+    text-decoration: underline;
+    background-color:azure;
 }
 @media (max-width: 768px) {
     .list-unstyled p,

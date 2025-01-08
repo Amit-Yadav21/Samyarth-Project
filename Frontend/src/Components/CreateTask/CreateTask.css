@@ -1,10 +1,7 @@
 .create-task-bg-color {
     background: linear-gradient(180deg, rgba(248,254,253,1) 18%, rgba(171,247,229,0.989233193277311) 45%, rgba(255,255,255,1) 100%);
 }
-.title-color{
-    color: white;
-    background-color: rgb(84, 84, 250);
-}
+
 .title-bg-color {
     background-color: #f7b103;
     border-top-left-radius: 25px;
