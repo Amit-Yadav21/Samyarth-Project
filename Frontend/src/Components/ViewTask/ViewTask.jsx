@@ -121,9 +121,9 @@ const ViewTask = () => {
                       <strong>Created At:</strong> {task.createdAt}
                     </Card.Text>
                   </div>
-                  <div className="d-flex justify-content-evenly edit-delete-btn mt-2">
+                  <div className="d-flex justify-content-end edit-delete-btn mt-2">
                     <Button variant="" className='edit-btn' title='Edit' onClick={() => handleEditClick(task)}>✏️</Button>
-                    <Button variant="" className='delete-btn' title='Delete' onClick={() => deleteTask(task._id)}>🗑️</Button>
+                    {/* <Button variant="" className='delete-btn' title='Delete' onClick={() => deleteTask(task._id)}>🗑️</Button> */}
                   </div>
                 </Card.Body>
               </Card>
